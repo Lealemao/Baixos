@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DreamBasses.Models;
+using System.Text.Json;
 
 namespace DreamBasses.Controllers;
 
@@ -15,7 +16,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        List<Baixo> baixos = [];
+        using (StreamReader leitor = new("Data\\baixos.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            baixos = JsonSerializer.Deserialize<List<Baixo>>(dados);
+        }
+        return View(baixos);
     }
 
     public IActionResult Privacy()
