@@ -59,11 +59,11 @@
             <!-- Card Pokemon - Inicio -->
             @foreach (var baixo in Model){
                 <div class="col">
-                <div class="card shadow-sm cursor-pointer planta venenoso" onclick="GetInfo(001)">
-                    <img src="img/Player_Jazz_Bass.jpg" class="card-img-top" width="100%" height="300" alt="Bulbasaur" />
+                <div class="card shadow-sm cursor-pointer planta venenoso" @string.Join(' ', baixo.Marca)>
+                    <img src="@baixo.Img" class="card-img-top" width="100%" height="300" alt="@baixo.Name" />
                     <div class="card-body">
-                        <p class="card-text mb-0">Nº 001</p>
-                        <h3 class="card-title">Bulbasaur</h3>
+                        <h3 class="card-title">@baixo.Name</h3>
+                        <p class="card-text mb-0">R$@baixo.Price</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="#" class="btn my-2 text-white" style="background-color:#7c5">Planta</a>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             }    
             <!-- Card Pokemon - Fim -->
 
