@@ -22,6 +22,34 @@ public class HomeController : Controller
             string dados = leitor.ReadToEnd();
             baixos = JsonSerializer.Deserialize<List<Baixo>>(dados);
         }
+        List<Marca> marcas = [];
+        using (StreamReader leitor = new("Data\\marcas.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            marcas = JsonSerializer.Deserialize<List<Marca>>(dados);
+        }
+        ViewData["Marcas"] = marcas;
+        return View(baixos);
+    }
+    public IActionResult Details(int id)
+    {
+        List<Baixo> baixos = [];
+        using (StreamReader leitor = new("Data\\baixos.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            baixos = JsonSerializer.Deserialize<List<Baixo>>(dados);
+        }
+        List<Marca> marcas = [];
+        using (StreamReader leitor = new("Data\\marcas.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            marcas = JsonSerializer.Deserialize<List<Marca>>(dados);
+        }
+        DetailsVM details = new() {
+            Atual = baixos.FirstOrDefault(b => b.Num == id),
+            Anterior = baixos.OrderByDescending(b => b.Num).FirstOrDefault(b => b.Num < id),    
+            Proximo = baixos.OrderBy(b => b.Num).FirstOrDefault(b => b.Num > id)
+        };
         return View(baixos);
     }
 

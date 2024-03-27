@@ -1,26 +1,32 @@
 ﻿[
   {
+    "Num": 1,
     "Name": "PLAYER JAZZ BASS",
     "Description": "Lançado em 1960, o Fender® Jazz Bass é o modelo contrabaixo mais usado em shows e gravações na história da música! Sempre copiado e nunca igualado, o Fender® Jazz Bass Player Series celebra seu lançamento com excelentes inovações! Extremamente confortável para se tocar, lendária e versátil sonoridade Jazz Bass, novos trastes, novos captadores Player Series Alnico 5, novas cores e toda a história que somente um Fender® Jazz Bass carrega! Surpreenda-se com os novos Fender® Jazz Bass Player Series.",
     "Spec": "- Corpo em alder - Braço em maple modern C shape - Headstock com logo spaghetti - Escala em pau ferro com 34 (864 mm)- 20 trastes medium jumbo - Escala com raio de 9.5 305 mm - Largura do nut 1.5 (38.1 mm) - Tarraxas standard abertas - 2 captadores Fender® Player Series Alnico 5 Single-Coil Jazz Bass - Ponte standard estilo vintage c/ 4 saddles - Controles de V/V/MT - Escudo sanduiche (3ply) - Encordoamento Fender® USA Bass 7250M, (.045-.105)",
     "Price": "7.999,00",
     "Img": "\\img\\Player_Jazz_Bass.jpg",
-    "Marca": "Fender"
+    "Marca": "Fender",
+    "Cor": "#7a7a7a"
   },
   {
+    "Num": 2,
     "Name": "VINTERA® II '60S JAZZ BASS",
     "Description": "A linha Vintera® traz o consagrado estilo Fender® vintage para a era moderna. É o instrumento ideal para músicos que buscam a inigualável sonoridade Fender® da golden era ! Cada instrumento reproduz fielmente as características de cada década. Seja bem vindo à nova era!",
     "Spec": "- Corpo em alder - Braço em maple Mid '60s C shape - Escala em pau ferro com 34 (864 mm) - Raio de 7.25 (148.1 mm) - 20 trastes estilo vintage - Largura do nut 1.5 (38.1 mm) - Tarraxas american vintage (reversas) - Ponte american vintage com 4 saddles - Ferragem cromada - 2 captadores estilo vintage single-coil '60s Jazz Bass - Controles de V/V/MT - Escudo toroise (4ply) - Encordoamento Fender® USA Bass 7250M (.045-.105) - Deluxe Gig Bag",
     "Price": "10.290,00",
     "Img": "\\img\\Vintera_Jazz_Bass.jpg",
-    "Marca": "Fender"
+    "Marca": "Fender",
+    "Cor": "#7a7a7a"
   },
   {
+    "Num": 3,
     "Name": "CONTRABAIXO FENDER® SIG SERIES STEVE HARRIS P BASS",
     "Description": "As linhas galopantes de baixo de Steve Harris vêm, há décadas, turbinando o som dos titãs do metal inglês Iron Maiden e fazendo dele um dos mais influentes baixistas do estilo. Ao longo dos anos, Harris se manteve fiel ao seu Precision Bass, e o seu novo baixo Signature agora tem acabamento na cor branca e com a estampa do escudo do seu time de futebol favorito (West Ham United). Outras características são o captador Seymour Duncan Steve Harris signature, a ponte Fender® Hi Mass e a assinatura de Steve Harris atrás do headstock.",
     "Spec": "- Corpo em maple - Braço maple (1pç) U shape - Escala em maple com 34 (864 mm) - Escala com raio de 7.25 (184.1 mm) - 20 trastes jumbo - Largura do nut 1.615 (41.02 mm) - Tarraxas Fender® estilo vintage '70s (abertas) - Ponte Fender® Hi-Mass - Ferragem cromada - 1 captador Seymour Duncan Steve Harris Signature P-Bass SPB-4 - Controles de MV/MT - Escudo cromado (1 ply) - Encordoamento Rotosound Steve Harris Signature Custom Flat-Wound (.050-.110) - Acompanha Deluxe Gig Bag",
     "Price": "13.990,00",
     "Img": "\\img\\SigSeries_PBass.jpg",
-    "Marca": "Fender"
+    "Marca": "Fender",
+    "Cor": "#7a7a7a"
   }
 ]

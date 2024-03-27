@@ -1,6 +1,10 @@
 ﻿[
   {
     "Nome": "Fender",
-    "Cor": "#aab"
+    "Cor": "#7a7a7a"
+  },
+  {
+    "Nome": "Tagima",
+    "Cor": "#ff0000"
   }
 ]
