@@ -46,11 +46,12 @@ public class HomeController : Controller
             marcas = JsonSerializer.Deserialize<List<Marca>>(dados);
         }
         DetailsVM details = new() {
+            Basses = baixos,
             Atual = baixos.FirstOrDefault(b => b.Num == id),
             Anterior = baixos.OrderByDescending(b => b.Num).FirstOrDefault(b => b.Num < id),    
             Proximo = baixos.OrderBy(b => b.Num).FirstOrDefault(b => b.Num > id)
         };
-        return View(baixos);
+        return View(details);
     }
 
     public IActionResult Privacy()

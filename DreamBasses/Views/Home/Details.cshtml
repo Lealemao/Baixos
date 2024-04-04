@@ -1,10 +1,11 @@
-@model DreamBasses.Models.Baixo
+@model DetailsVM
 @{
-    ViewData["Title"] = "Marcas";
-    var marcas = (List<Marca>)ViewData["Marcas"];
+    ViewData["Title"] = "Details";
+    var baixos = (List<Marca>)ViewData["Marcas"];
 }
 
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,30 +21,38 @@
     <main>
         <section class="pt-5 container">
             <div class="row">
-                @* <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-outline-dark">001 - Bulbasaur</a>
-                </div> *@
                 <div class="col text-center">
-                    <h1 class="fs-1">@Model.Name<span class="fs-2 text-secondary">Nº @Model.Num</span></h1>
+                    @if (Model.Anterior != null)
+                    {
+                        <a asp-action="Details" asp-route-id="@Model.Anterior.Num"
+                            class="btn btn-lg btn-outline-dark">@Model.Anterior.Num.ToString("000") -
+                            @Model.Anterior.Name</a>
+                    }
                 </div>
-                @* <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-outline-dark">003 - Venusaur</a>
-                </div> *@
+                <div class="col text-center">
+                    <h1 class="fs-1">@Model.Atual.Name<span class="fs-2 text-secondary">Nº @Model.Atual.Num</span></h1>
+                </div>
+                @if (Model.Proximo != null)
+                {
+                    <a asp-action="Details" asp-route-id="@Model.Proximo.Num"
+                        class="btn btn-lg btn-outline-dark">@Model.Proximo.Num.ToString("000") - @Model.Proximo.Name</a>
+                }
             </div>
 
             <div class="row mt-3">
                 <div class="col-lg-5 p-0">
-                    <img class="img-fluid cursor-pointer" src="@Model.Img" alt="@Model.Name">
+                    <img class="img-fluid cursor-pointer" src="@Model.Atual.Img" alt="@Model.Atual.Name">
                 </div>
                 <div class="col-lg-7 fs-5 mt-4">
-                    <p class="mb-3"><strong>Descrição:</strong>@Model.Description</p>
-                    <p class="mb-3"><strong>Espicificações:</strong>@Model.Spec</p>
-                    <p class="mb-3"><strong>Preço: R$</strong>@Model.Price</p>
+                    <p class="mb-3"><strong>Descrição:</strong>@Model.Atual.Description</p>
+                    <p class="mb-3"><strong>Espicificações:</strong>@Model.Atual.Spec</p>
+                    <p class="mb-3"><strong>Preço: R$</strong>@Model.Atual.Price</p>
                     <div class="btn-group">
-                        @foreach (var baixo in Model.Marca){
+                        @foreach (var baixo in Model.Atual.Marca)
+                        {
 
-                        <a href="#" class="btn btn-lg text-white" style="background-color:">@Model.Marca</a>
-                    }
+                            <a href="#" class="btn btn-lg text-white" style="background-color:">@baixo</a>
+                        }
                     </div>
                 </div>
             </div>
@@ -54,8 +63,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <!-- <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/js/site.js" asp-append-version="true"></script> -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/site.js" asp-append-version="true"></script>
 </body>
 
 </html>
